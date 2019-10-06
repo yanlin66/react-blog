@@ -1,0 +1,16 @@
+{
+  "presets": ["react-app"],
+  "plugins": [
+    [
+      "import",
+      { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }
+    ],
+    [
+      "transform-decorators-legacy",
+      "transform-react-constant-elements",
+      "transform-react-remove-prop-types",
+      "babel-plugin-transform-object-rest-spread",
+      "babel-plugin-transform-function-bind"
+    ]
+  ]
+}
