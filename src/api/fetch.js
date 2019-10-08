@@ -12,15 +12,14 @@ export function fetchLink(options) {
   return new Promise((resolve, reject) => {
     const instance = axios.create({
       headers: {
-        logId : _util().randomWord(false, 32),
-        lang : 'zh'
+
       },
       timeout: 6000,
     });
     instance(options)
       .then(response => {
-        const res = response.data;
-        switch (res.code) {
+        const res = response;
+        switch (res.status) {
           case globalCode.timeOut:
             message.error("登录过期，请退出重新登录");
             break;
@@ -28,11 +27,8 @@ export function fetchLink(options) {
             message.info(res.message);
             reject(res);
             break;
-          case globalCode.token:
-            _util().logout();
-            break;
           case 200:
-            resolve(res);
+            resolve(res.data);
             break;
           default:
             message.warning((res.message)?res.message:res.msg);
