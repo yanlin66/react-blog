@@ -1,15 +1,15 @@
 let base = {};
 if (process.env.NODE_ENV === 'development') {
-  base.url = '';
+  base.url = 'http://seek.palpitation.shop/';
   base.env = process.env.NODE_ENV;
   base.time = new Date().toLocaleString()
 } else {
   if (process.env.REACT_APP_SCIENCE === 'qa') {
-    base.url = '';
+    base.url = 'http://seek.palpitation.shop/';
     base.env = process.env.NODE_ENV;
     base.time = new Date().toLocaleString();
   } else if (process.env.REACT_APP_SCIENCE === 'prod') {
-    // walmart product
+    // product
     base.url = '';
     base.env = process.env.NODE_ENV;
     base.time = new Date().toLocaleString();
@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'development') {
     base.time = new Date().toLocaleString();
   } else {
     //默认dev
-    base.url = '';
+    base.url = 'http://seek.palpitation.shop/';
     base.env = process.env.NODE_ENV;
     base.time = new Date().toLocaleString()
   }
