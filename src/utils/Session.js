@@ -1,4 +1,3 @@
-import {browserHistory } from 'react-router'
 const LOGIN_COOKIE_NAME = 'sessionId';
 
 export function isAuthenticated () {
