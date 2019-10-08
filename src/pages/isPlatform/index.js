@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import { inject, observer } from "mobx-react/index";
 import "./style.less";
 @withRouter
-@inject("appStore")
+@inject("IndexCommon")
 @observer
 class isPlatform extends Component {
   state = {
@@ -14,6 +14,7 @@ class isPlatform extends Component {
     let userAgentInfo = navigator.userAgent;
     let Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
     let flag = true;
+    // eslint-disable-next-line array-callback-return
     Agents.map(req => {
       if (userAgentInfo.indexOf(req) > 0) {
         flag = false;
@@ -28,7 +29,7 @@ class isPlatform extends Component {
   };
 
   componentDidMount() {
-    this.goRouter()
+    this.goRouter();
   }
 
   render() {
