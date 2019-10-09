@@ -5,7 +5,6 @@
 import axios from 'axios';
 import globalCode from "./globalCode";
 import { message } from "antd";
-import { _util } from 'src/utils'
 
 //与服务器的对接的封装（异常的处理）
 export function fetchLink(options) {
@@ -14,7 +13,7 @@ export function fetchLink(options) {
       headers: {
 
       },
-      timeout: 6000,
+      timeout: 12000,
     });
     instance(options)
       .then(response => {

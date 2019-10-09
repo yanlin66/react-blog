@@ -12,10 +12,45 @@ export function queryHistory() {
   })
 }
 
-// 当前Books信息
+// 首页Books信息
 export function queryBooks() {
   return fetchLink({
-    url: base.url + `/index/Read/index`,
+    url: base.url + `/index/read/index`,
+    method: 'post',
+    data: {},
+    headers: {
+      'Content-Type': 'application/json;charset=UTF-8'
+    }
+  })
+}
+// 热点推荐Books信息
+export function queryActiveBooks() {
+  return fetchLink({
+    url: base.url + `/index/read/recommonList`,
+    method: 'post',
+    data: {},
+    headers: {
+      'Content-Type': 'application/json;charset=UTF-8'
+    }
+  })
+}
+
+// Books列表信息
+export function queryBooksList(pages) {
+  return fetchLink({
+    url: base.url + `/index/read/readList?pages=1`,
+    method: 'get',
+    data: {},
+    headers: {
+      'Content-Type': 'application/json;charset=UTF-8'
+    }
+  })
+}
+
+// 项目过往
+export function queryReflect() {
+  return fetchLink({
+    url: base.url + `/index/reflect/index`,
     method: 'post',
     data: {},
     headers: {
