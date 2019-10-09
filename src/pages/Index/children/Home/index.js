@@ -12,8 +12,7 @@ class Home extends React.Component {
   };
 
   componentDidMount() {
-    this.props.IndexCommon.setBooks();
-    this.props.IndexCommon.setHistory();
+
   }
 
   render() {

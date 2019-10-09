@@ -1,4 +1,61 @@
 .reflect-page{
-    background-color: #fff;text-align: center;
-    display: flex;font-size: 38px;align-items: center;justify-content: center;height: 600px;
+    background-color: #fff;text-align: center;padding: 0 10%;
+    .c-title{
+        line-height: 60px;padding: 10px 0;font-size: 24px;color: #666;text-align: center;
+    }
+    .customer-main{
+        display: flex;flex-wrap: wrap;align-items: center;width: auto;justify-content: space-between;
+    }
+    a{
+        display: block;width: 100%;
+        margin:0 10px 10px;padding:0 0 10px 120px;position: relative;
+        .c-child-warp{
+            background-color: rgba(250, 173, 20,.1);
+        }
+        &:after{
+            content: '';width: 6px;height: 6px;border-radius: 50%;
+            background-color: #fff;position: absolute;left: 4px;top: 0;bottom: 0;margin: auto;
+        }
+        &:first-child {
+            .c-child-time:after{
+                background-color: rgb(250, 173, 20);
+            }
+            .c-child-time{
+                color: rgb(250, 173, 20);
+            }
+        }
+        &:last-child:before{
+            background-color: #fff;
+        }
+        &:before{
+            content: '';width: 1px;height: 100%;border-radius: 50%;
+            background-color: #ddd;position: absolute;left: 6px;top: 50%;
+        }
+    }
+    .c-child-time{
+        position: absolute;left: 20px;top: 0;bottom: 0;margin: auto;
+        font-size: 16px;color: rgb(82, 196, 26);
+        display: flex;align-items: center;justify-content: center;
+        &:after{
+            content: '';width: 12px;height: 12px;border-radius: 50%;
+            background-color: rgb(82, 196, 26);position: absolute;left: -19px;top: 0;bottom: 0;margin: auto;
+        }
+    }
+    .c-child-title{
+        font-size: 22px;color: #333;line-height: 40px;width: 100%;
+        display: flex;flex-wrap: wrap;align-items: center;justify-content: space-between;
+        span{
+            font-size: 14px;color: rgba(250, 84, 28,.6);
+        }
+    }
+    .c-child-grade{
+        font-size: 16px;color: #666;line-height: 30px;width: 100%;
+        display: flex;flex-wrap: wrap;align-items: center;justify-content: space-between;
+        span{
+            font-size: 14px;color: #999;
+        }
+    }
+    .c-child-warp{
+        width: 100%;background-color: #f8f8f8;padding: 8px;border-radius: 8px;overflow: hidden;
+    }
 }
